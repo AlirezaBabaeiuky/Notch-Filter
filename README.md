@@ -15,6 +15,6 @@ Above figure shows the notch filter influence on both collocated and non-colloca
 ![image](https://github.com/user-attachments/assets/844e4a70-476e-4d0f-979b-c41908a175da)
 Above figure, shows the major affect of the notch filter on securing stability when using a controller. Pay careful attention to the natural frequency region, where the main system with controller becomes easily unstable as the peak at the wn (natural frequency) corresponds to the phase around '-180' degrees or even below that. But this problem is resolved via notch filter. Meaning that with a Notch filter, we can secure both: having a wide bandwidth and having a stable and robust system to handle uncertainties and internal dynamics. 
 Warning: This is crucially vital not to use Notch filters for suppressing ANY External Disturbances. As doing so only makes the controller BLIND. 
-
+Warning: If Notch filtering is enough to suppress internal dynamics, why not to replace a controller (e.g., PID, SMC, ...) with notch filters in vibration control? Answer: Notch filter has a very limitted and restricted bandwidth (its functionlaity is very narrow), but a regular controller typically has a wide bandwidth and can take care of uncertainties and further disturbances better. This is why in industry, first we start with a controller to address the issues as much as possible, and infrequency response tools like (Tunetool) we add notch filters to address the problems which are typically very few in a sole manner.  
 
 
